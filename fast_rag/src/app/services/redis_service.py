@@ -35,7 +35,7 @@ class RedisService:
         if not is_validated:
             raise HTTPException(
                 status_code=status.HTTP_401_UNAUTHORIZED,
-                detail="인증 토큰이 유요하지 않거나 만료되었습니다."
+                detail="인증 토큰이 유효하지 않거나 만료되었습니다."
             )
 
         return is_validated
