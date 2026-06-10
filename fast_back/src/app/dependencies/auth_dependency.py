@@ -38,10 +38,11 @@ async def get_auth_context(
             tokens=tokens
         )
 
-
     except JWTError:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="유효하지 않은 토큰"
         )
+    
+
     
